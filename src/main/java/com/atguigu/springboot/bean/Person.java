@@ -2,6 +2,7 @@ package com.atguigu.springboot.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.Map;
  * 将配置文件中配置的每一个属性的值，注入到 Bean 中
  */
 @Component
+//@PropertySource(value = "classpath:person.properties")
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
